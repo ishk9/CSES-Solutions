@@ -14,26 +14,19 @@ using namespace std;
  
  
 int32_t main(){
-    // Time taken to solve:- 15mins 10sec 
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
  
-    int n; 
-    cin>>n;
-    vector<int> inp;
-    for(int i=0;i<n;i++){
+    int n;cin>>n;
+
+    int curr = 0;
+    for(int i=1;i<n;i++){
         int x;cin>>x;
-        inp.pb(x);
+        curr += x;
     }
-    vector<int> v(n+1, 0);
-    for(auto i:inp) v[i] = 1;
-    
-    for(int i=1;i<=n;i++){
-        if(v[i] == 0) {
-            cout<<i<<endl;
-            break;
-        }
-    }
- 
+
+    int total = (n * (n + 1)) / 2;
+    cout<<total - curr<<endl;
+
     return 0;
 }
