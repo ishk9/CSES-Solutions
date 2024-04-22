@@ -1,3 +1,3 @@
 ## CSES Problemset Solutions
 
-# Solutions in C++
+Solutions in C++
